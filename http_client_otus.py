@@ -21,4 +21,5 @@ headers = data.decode("utf-8")
 # Отправляем ответ
 conn.send(f"HTTP/1.1 200 OK\n Content-Length: 100\n Connection: close\n Content-Type: text/html\n\n <h1>{headers}</h1>".encode("utf-8"))
 
+# Закрываем соединение
 my_socket.close()
